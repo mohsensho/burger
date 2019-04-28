@@ -1,0 +1,89 @@
+<!--================Book Area =================-->
+	<section class="reservation">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="main_title position-relative">
+						<h1>Type your order please!</h1>
+						<hr>
+						<div class="round-planet planet">
+							<div class="round-planet planet2">
+								<div class="shape shape1"></div>
+								<div class="shape shape2"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="book_table_inner row align-items-center">
+				<div class="offset-lg-2 offset-md-1 col-lg-8 col-md-10">
+					<div class="table_form">
+						<form id="submit-burger" class="book_table_form row">
+							<div class="form-group col-md-12">
+								<input type="text" class="form-control" id="addburger" name="name" placeholder="Enter your Burger">
+							</div>
+							<div class="form-group col-md-12">
+								<button type="submit" value="submit" class="btn submit_btn form-control">Submit!</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- show orders -->
+			<!--================ Menu Area =================-->
+			<section class="menu_area white">
+				<div class="container">
+					<div class="row menu_inner">
+						<div class="col-md-12 col-lg-10 col-xl-6" style="background: #81A678; padding: 20px;">
+							<div class="menu_list">
+                <h2>Your Order(s):</h2>
+								<ul class="list">
+                  {{#each burgers}}
+                    {{#unless devoured}}
+                    <li>
+                      <h4>
+                        {{burger_name}}
+                        <button class="devour" data-id="{{id}}">devour!</button>
+										  </h4>
+                    </li>
+                    {{/unless}}
+                  {{/each}}
+								</ul>
+							</div>
+						</div>
+						<!-- Showing devoured-->
+            
+						<div class="col-md-12 col-lg-10 col-xl-6" style="background: #E7CE7A; padding: 20px;">
+							<div class="menu_list pr-0">
+                <h2>Good appetite!</h2>
+								<ul class="list">
+									{{#each burgers}}
+                    {{#if devoured}}
+                    <li>
+                      <h4>{{burger_name}}</h4>
+                    </li>
+                    {{/if}}
+                  {{/each}}
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</section>
+	<!--================End Book Table Area =================-->
+
+	<!--================ start footer Area  =================-->
+	<footer class="footer-area p_120">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-2  col-md-6 col-sm-6">
+					<div class="single-footer-widget tp_widgets">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!--================ End footer Area  =================-->
